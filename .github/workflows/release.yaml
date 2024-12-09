@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    steps:
+      - name: clone repo
+        uses: actions/checkout@v4
+
+      - name: install
+        run: |
+          yarn install
+
+      - name: build
+        run: |
+          yarn build
+  
+      # commit file
+      - uses: stefanzweifel/git-auto-commit-action@v5  
+
+      - uses: gacts/purge-jsdelivr-cache@v1
+        with:
+          url: |
+            https://cdn.jsdelivr.net/npm/@ngatngay/jquery.plugin/dist/app.min.js

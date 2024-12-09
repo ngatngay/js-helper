@@ -1,0 +1,29 @@
+{
+  "name": "@ngatngay/jquery.plugin",
+  "version": "1.0.1",
+  "description": "jquery plugin pro max",
+  "main": "dist/app.js",
+  "scripts": {
+    "generate-index": "node index-gen.js",
+    "build": "npm run generate-index && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngatngay/jquery.plugin.git"
+  },
+  "keywords": [
+    "jquery"
+  ],
+  "author": "ngatngay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngatngay/jquery.plugin/issues"
+  },
+  "homepage": "https://github.com/ngatngay/jquery.plugin#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.27.4"
+  }
+}
