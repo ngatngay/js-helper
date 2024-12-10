@@ -1,11 +1,12 @@
 {
-  "name": "@ngatngay/jquery.plugin",
+  "name": "@ngatngay/js-helper",
   "version": "1.0.1",
-  "description": "jquery plugin pro max",
-  "main": "dist/app.js",
+  "type": "module",
+  "description": "javascript helper pro max",
+  "main": "dist/ngatngay.js",
   "scripts": {
-    "generate-index": "node index-gen.js",
-    "build": "npm run generate-index && rollup -c"
+    "generate-index": "node gen.js",
+    "build": "npm run generate-index && rollup -c rollup-js.js && rollup -c rollup-jquery.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,15 @@
   },
   "homepage": "https://github.com/ngatngay/jquery.plugin#readme",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.27.4"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "jquery": "^3.7.1"
   }
 }
