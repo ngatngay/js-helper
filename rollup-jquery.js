@@ -7,7 +7,8 @@ export default {
   output: {
     file: 'dist/jquery.js',
     format: 'iife',
-    name: '$'
+    extend: true,
+    name: 'window'
   },
   plugins: [
     nodeResolve(),

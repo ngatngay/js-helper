@@ -25,4 +25,5 @@ jobs:
       - uses: gacts/purge-jsdelivr-cache@v1
         with:
           url: |
-            https://cdn.jsdelivr.net/npm/@ngatngay/jquery.plugin/dist/app.min.js
+            https://cdn.jsdelivr.net/npm/@ngatngay/js-helper/dist/ngatngay.js
+            https://cdn.jsdelivr.net/npm/@ngatngay/js-helper/dist/jquery.js

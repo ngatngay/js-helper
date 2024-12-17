@@ -23,7 +23,7 @@ import $ from 'jquery'
 
 ${jqueryContent}
 
-export default $;
+export { $, $ as jQuery };
 `;
         await fs.writeFile('build-jquery.js', finalJQueryContent);
 
