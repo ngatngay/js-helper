@@ -1,8 +1,8 @@
 import $ from 'jquery';
-import { lsData } from './localStorage';
+import { local_storage } from './local_storage';
 
 $.extend({
-    lsData: lsData
+    local_storage: local_storage
 })
 
 export { $ };
